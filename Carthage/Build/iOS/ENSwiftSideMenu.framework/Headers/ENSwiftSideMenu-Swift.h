@@ -236,6 +236,14 @@ SWIFT_CLASS("_TtC15ENSwiftSideMenu30ENSideMenuNavigationController")
 
 
 
+@interface UIViewController (SWIFT_EXTENSION(ENSwiftSideMenu))
+/// Changes current state of side menu view.
+- (void)toggleSideMenuView;
+/// Hides the side menu view.
+- (void)hideSideMenuView;
+/// Shows the side menu view.
+- (void)showSideMenuView;
+@end
 
 SWIFT_MODULE_NAMESPACE_POP
 #pragma clang diagnostic pop
