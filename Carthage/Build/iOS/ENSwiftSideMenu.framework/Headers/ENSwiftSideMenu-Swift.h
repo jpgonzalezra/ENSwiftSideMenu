@@ -185,9 +185,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("ENSwiftSideMenu")
+@class UIGestureRecognizer;
 
 SWIFT_CLASS("_TtC15ENSwiftSideMenu10ENSideMenu")
 @interface ENSideMenu : NSObject <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
