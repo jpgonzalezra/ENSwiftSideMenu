@@ -11,7 +11,7 @@
 // Name of your project + '-Swift.h'
 // There is no autocomplete while you typing
 // Go inside this class to understand how works swift code in the objc project
-#import "objcexample-Swift.h"
+#import "ObjCExample-Swift.h"
 
 #import "MenuItemsTVC.h"
 
@@ -28,8 +28,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *contentVC = [storyboard instantiateViewControllerWithIdentifier:@"ViewController1"];
     
-    ENSideMenuNavigationController *navVC = [[ENSideMenuNavigationController alloc] initWithMenuTableViewController:sideMenuTVC
-                                                                                              contentViewController:contentVC];
+    ENSideMenuNavigationController *navVC = [[ENSideMenuNavigationController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:navVC];
     [self.window makeKeyAndVisible];

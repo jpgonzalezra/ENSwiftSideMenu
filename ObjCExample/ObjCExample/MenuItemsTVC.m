@@ -7,7 +7,7 @@
 //
 
 #import "MenuItemsTVC.h"
-#import "objcexample-Swift.h"
+#import "ObjCExample-Swift.h"
 
 @implementation MenuItemsTVC
 
@@ -58,7 +58,7 @@
             break;
     }
     
-    [self.sideMenuController setContentViewController:destTVC];
+   // [self.sideMenuController setContentViewController:destTVC];
 }
 
 @end
