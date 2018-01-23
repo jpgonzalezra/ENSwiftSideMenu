@@ -342,7 +342,7 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer is UISwipeGestureRecognizer {
             let swipeGestureRecognizer = gestureRecognizer as! UISwipeGestureRecognizer
             if !self.allowLeftSwipe {

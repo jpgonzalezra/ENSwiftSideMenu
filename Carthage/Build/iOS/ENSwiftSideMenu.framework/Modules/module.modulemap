@@ -1,0 +1,11 @@
+framework module ENSwiftSideMenu {
+  umbrella header "ENSwiftSideMenu.h"
+
+  export *
+  module * { export * }
+}
+
+module ENSwiftSideMenu.Swift {
+    header "ENSwiftSideMenu-Swift.h"
+    requires objc
+}
