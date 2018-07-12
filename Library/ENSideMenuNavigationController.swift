@@ -40,15 +40,20 @@ open class ENSideMenuNavigationController: UINavigationController, ENSideMenuPro
     }
     
     // MARK: - Navigation
-    public func setContentViewController(contentViewController: UIViewController) {
+    public func setContentViewController(contentViewController: UIViewController, push:Bool = false) {
         self.sideMenu?.toggleMenu()
         switch sideMenuAnimationType {
         case .None:
             self.viewControllers = [contentViewController]
             break
         default:
-            contentViewController.navigationItem.hidesBackButton = true
-            self.setViewControllers([contentViewController], animated: true)
+            if(push == true) {
+                self.pushViewController(contentViewController, animated: true)
+                contentViewController.navigationItem.hidesBackButton = false
+            } else {
+                contentViewController.navigationItem.hidesBackButton = true
+                self.setViewControllers([contentViewController], animated: true)
+            }
             break
         }
         
