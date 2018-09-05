@@ -40,8 +40,10 @@ open class ENSideMenuNavigationController: UINavigationController, ENSideMenuPro
     }
     
     // MARK: - Navigation
-    public func setContentViewController(contentViewController: UIViewController, push:Bool = false) {
-        self.sideMenu?.toggleMenu()
+    public func setContentViewController(contentViewController: UIViewController, push:Bool = false, toggle:Bool = true) {
+        if toggle {
+            self.sideMenu?.toggleMenu()
+        }
         switch sideMenuAnimationType {
         case .None:
             self.viewControllers = [contentViewController]

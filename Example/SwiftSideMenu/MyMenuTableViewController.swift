@@ -90,7 +90,7 @@ class MyMenuTableViewController: UITableViewController {
             destViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController4")
             break
         }
-        sideMenuController()?.setContentViewController(destViewController)
+        sideMenuController()?.setContentViewController(contentViewController: destViewController, push: true, toggle: true)
     }
     
     
